@@ -12,7 +12,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <?php if ( defined('WPSEO_VERSION') ) {
-} else { 
+} else {
 global $post;
 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
 <title><?php echo the_title(); ?></title>
@@ -64,11 +64,11 @@ foreach ( (array) $entries as $key => $entry ) {
 	}
 	if ( isset( $entry['code'] ) ) {
         $code = esc_html($entry['code']);
-		$codelang = $entry['codelanguage'];
+		    $codelang = $entry['codelanguage'];
 	}
 	if ( isset( $entry['foogallery'] ) )
         $foogallery = do_shortcode( $entry['foogallery'] );
-    
+
 	if(!empty($accent)) {
 		$halfclass = 'half';
 	} else {
@@ -80,13 +80,13 @@ foreach ( (array) $entries as $key => $entry ) {
 	echo $img;
 	echo '<div class="content"><h2>' . $title . '</h2>';
 	echo '<div class="' . $halfclass . '">' . $desc . '</div>';
-	if(!empty( $accent )) { ?> 	
+	if(!empty( $accent )) { ?>
 		<img src="<?php echo $accent[0]; ?>" width="<?php echo $accent[1]; ?>" class="preserve accent">
 	<?php }
 	echo '<div class="gallery">' . do_shortcode($foogallery) . '</div>';
 	if(!empty($code)) { ?>
-		<h5>Code Example:</h5>
-		<a href="#<?php $entry->ID; ?>code" target="foobox" class="code"><?php echo $codelang; ?></a>
+		<h5><a href="#<?php $entry->ID; ?>code" target="foobox" class="code">Code Example</a></h5>
+
 		<div id="<?php $entry->ID; ?>code" style="display:none;">
 			<h5 class="codetitle">Code Example: <?php echo $codelang; ?></h5>
 			<pre><code data-language="<?php echo $codelang?>"><?php print_r( $code ); ?></code></pre>
@@ -95,7 +95,7 @@ foreach ( (array) $entries as $key => $entry ) {
 	}
 	echo '</div>';
 	echo '</li>';
-	
+
 	}//end of foreach ?>
 	</ul>
 </div><!--end #slides-->
