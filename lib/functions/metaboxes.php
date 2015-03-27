@@ -14,7 +14,7 @@ function mc_wcsd_metaboxes() {
 
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_mcwcsd_';
-	
+
 	/**
 	 * Repeatable Field Groups
 	 */
@@ -23,7 +23,7 @@ function mc_wcsd_metaboxes() {
 		'title'        => __( 'SLIDES', 'cmb2' ),
 		'object_types' => array( 'presentation', ),
 	) );
-	
+
 	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
 	$group_field_id = $cmb_group->add_field( array(
 		'id'          => $prefix . 'slides',
@@ -36,7 +36,7 @@ function mc_wcsd_metaboxes() {
 			'sortable'      => true, // beta
 		),
 	) );
-	
+
 
 	/**
 	 * Group fields works the same, except ids only need
@@ -56,10 +56,9 @@ function mc_wcsd_metaboxes() {
 		'description' => __( 'Write a short description for this slide', 'cmb2' ),
 		'id'          => 'description',
 		'type'        => 'wysiwyg',
-		'options' => array( 
-			'textarea_rows' => get_option('default_post_edit_rows', 5), // rows="..."
-			'teeny' => true, 
-			'dfw' => false, 
+		'options' => array(
+			'textarea_rows' => get_option('default_post_edit_rows', 10), // rows="..."
+			'dfw' => false,
 			'quicktags' => false),
 	) );
 
@@ -68,14 +67,14 @@ function mc_wcsd_metaboxes() {
 		'id'   => 'image',
 		'type' => 'file',
 	) );
-	
+
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name' => __( 'Accent Image', 'cmb2' ),
 		'description' => __( 'Add another image to the slide', 'cmb2' ),
 		'id'   => 'accent_image',
 		'type' => 'file',
 	) );
-	
+
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'       => __( 'FooGallery', 'cmb2' ),
 		'description' => __( 'Add a FooGallery Shortcode here to include it at the bottom of the slide', 'cmb2' ),
@@ -83,13 +82,13 @@ function mc_wcsd_metaboxes() {
 		'type'       => 'text',
 		// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
 	) );
-	
+
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'        => __( 'Add Code Example', 'cmb2' ),
 		'id'          => 'code',
 		'type'        => 'textarea',
 		// 'repeatable'  -> true,
-		
+
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'        => __( 'Code Language', 'cmb2' ),
@@ -101,7 +100,7 @@ function mc_wcsd_metaboxes() {
 			'php' => 'PHP',
 			'html' => 'General',
 		),
-		
+
 	) );
 
 }
