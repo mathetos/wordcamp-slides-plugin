@@ -59,7 +59,7 @@ function mc_wcsd_metaboxes() {
 		'options' => array(
 			'textarea_rows' => get_option('default_post_edit_rows', 10), // rows="..."
 			'dfw' => false,
-			'quicktags' => false),
+			'quicktags' => true),
 	) );
 
 	$cmb_group->add_group_field( $group_field_id, array(
