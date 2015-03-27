@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'Boston';
+    src: url('../fonts/boston_traffic.eot');
+    src: url('../fonts/boston_traffic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/boston_traffic.woff2') format('woff2'),
+         url('../fonts/boston_traffic.woff') format('woff'),
+         url('../fonts/boston_traffic.ttf') format('truetype'),
+         url('../fonts/boston_traffic.svg#boston_trafficregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html,body {
+font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size: 16px;
+font-size: 1em;
+}
+a {
+color: #ddd;
+}
+a:hover {
+color: #aaa;
+}
+
+h3 {font-size: 2em;}
+h4 {font-size: 1.7em;}
+h5 {font-size: 1.5em;}
+h6 {font-size: 1em;}
+
+h3,h4,h5,h6 {
+  color: #222;
+}
+.header {
+position: fixed;
+width: 100%;
+color: white;
+background: #777;
+font-size: 0.85em;
+z-index: 999;
+font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+line-height: 2;
+}
+.header a {color: white; text-decoration:none;}
+.header a:hover {color: #ddd; border: 1px solid #ddd; border-width: 0 0 1px 0;}
+.header a.return {
+  background: #F1564A;
+  height: 100%;
+  display: inline-block;
+  line-height: 4;
+  padding: 0 2em;
+  left: 0;
+  top: 0;
+}
+.header a.home {
+  margin-left: 2em;
+}
+#slides {
+  position: relative;
+}
+#slides .slides-container {
+  display: none;
+}
+#slides .scrollable {
+  *zoom: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+#slides .scrollable:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.slides-navigation {
+  margin: 0 auto;
+  position: absolute;
+  z-index: 3;
+  top: 46%;
+  width: 100%;
+}
+.slides-navigation a {
+  position: absolute;
+  display: block;
+}
+.slides-navigation a.prev {
+  left: 0;
+}
+.slides-navigation a.next {
+  right: 0;
+}
+
+.slides-pagination {
+  position: absolute;
+  z-index: 3;
+  bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
+.slides-pagination a {
+  border: 2px solid #222;
+  border-radius: 15px;
+  width: 10px;
+  height: 10px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");
+  margin: 2px;
+  overflow: hidden;
+  text-indent: -100%;
+}
+.slides-pagination a.current {
+  background: #222;
+}
+
+#slides .content {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  max-width: 700px;
+}
+
+#slides .content .half,
+#slides .content img.accent {
+	width: 45%;
+	margin: 0 2.5%;
+	display: inline-block;
+	float: left;
+}
+#slides .content .half:after {
+    content:'';
+    display:block;
+    clear: both;
+}
+
+#slides .content h2 {
+	color: white;
+	font-family: 'Boston', Impact, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-size: 2rem;
+}
+#slides .content p,
+#slides .content ul li,
+#slides .content p a {
+	font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #D6D6D6;
+	font-size: 1.5rem;
+}
+
+.gallery.fbx-instance {
+position: relative;
+  top: 2em;
+  left: 0;
+}
+
+.fbx-metro .fbx-inner {
+  border: solid 0 transparent;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  box-shadow: 0px 0px 11px 25px rgba(255,255,255,.15);
+}
+.fbx-light .fbx-inner {
+  background-color: #272822;
+}
+.content .code {
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  background: #777;
+  line-height: 9;
+  text-align: center;
+  box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.4);
+  border: 4px solid #333;
+  font-family: 'Raleway', sans-serif;
+  color: #ddd;
+  text-decoration: none;
+    -webkit-transition: background 350ms ease-in-out;
+-moz-transition: background 350ms ease-in-out;
+-ms-transition: background 350ms ease-in-out;
+-o-transition: background 350ms ease-in-out;
+transition: background 350ms ease-in-out;
+}
+.content .code:hover {
+  background: #AAA;
+}
+h5.codetitle {
+  background: #767772;
+  line-height: 1;
+  margin: 0;
+  padding: 1em;
+}
