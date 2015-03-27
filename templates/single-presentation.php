@@ -84,10 +84,11 @@ foreach ( (array) $entries as $key => $entry ) {
 		<img src="<?php echo $accent[0]; ?>" width="<?php echo $accent[1]; ?>" class="preserve accent">
 	<?php }
 	echo '<div class="gallery">' . do_shortcode($foogallery) . '</div>';
-	if(!empty($code)) { ?>
-		<h5><a href="#<?php $entry->ID; ?>code" target="foobox" class="code">Code Example</a></h5>
+	if(!empty($code)) {
+    ?>
+		<h5><a href="#<?php echo $key; ?>-code" target="foobox" class="code">Code Example</a></h5>
 
-		<div id="<?php $entry->ID; ?>code" style="display:none;">
+		<div id="<?php echo $key; ?>-code" style="display:none;">
 			<h5 class="codetitle">Code Example: <?php echo $codelang; ?></h5>
 			<pre><code data-language="<?php echo $codelang?>"><?php print_r( $code ); ?></code></pre>
 		</div>
